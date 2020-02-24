@@ -1,0 +1,54 @@
+{
+    "name": "williamug/adminfrontend",
+    "description": "Frontend scaffolding",
+    "keywords": [
+        "williamug",
+        "adminfrontend"
+    ],
+    "homepage": "https://github.com/williamug/adminfrontend",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "williamdk",
+            "email": "asabawilliamdk@yahoo.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Williamug\\AdminFrontend\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Williamug\\AdminFrontend\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Williamug\\AdminFrontend\\AdminFrontendServiceProvider"
+            ],
+            "aliases": {
+                "AdminFrontend": "Williamug\\AdminFrontend\\AdminFrontendFacade"
+            }
+        }
+    }
+}
